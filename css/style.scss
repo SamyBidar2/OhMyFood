@@ -188,17 +188,21 @@ a{
     // border: 1px dashed #0536a8;
 }
 
+// .Card-texte{
+//     display: flex;
+//     flex-direction: column; //remplacé par un margin bottom en bas du titre
+//     gap:5px;
+// }
+
 .card-title{
     margin-top: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     max-width: 267px;
-    // border: 1px dashed #a80505;
 }
 .card-subtitle{
     font-size: 17px;
     margin-top: 0px;
     margin-bottom: 16px;
-    // border: 1px dashed #a80505;
 }
 
 .card-like{
@@ -212,12 +216,26 @@ a{
 
 /* footer */
 footer{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
     background-color: #353535;
     color: white;
+    padding: 22px 25px;
 }
 
 footer h3{
     font-family: 'Shrikhand' , serif;
+    margin: 0px;
+
+}
+.Footer-texte-icone{
+    display: flex;
+    gap:11px;
+}
+
+Footer i{
+    height: 11px;
 }
 
 

@@ -183,7 +183,7 @@ a {
 
 .card-title {
   margin-top: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   max-width: 267px;
 }
 
@@ -204,12 +204,26 @@ a {
 
 /* footer */
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background-color: #353535;
   color: white;
+  padding: 22px 25px;
 }
 
 footer h3 {
   font-family: 'Shrikhand' , serif;
+  margin: 0px;
+}
+
+.Footer-texte-icone {
+  display: flex;
+  gap: 11px;
+}
+
+Footer i {
+  height: 11px;
 }
 
 /*********************************** pour la version desktop ***********************************************/

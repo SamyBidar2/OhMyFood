@@ -39,6 +39,11 @@ header{
     background-color: var(--sec-bg-color);
 }
 
+header img{
+    height: 44px;
+    padding: 14px 89px;
+}
+
 .Location{
     display:flex;
     justify-content: center;
@@ -84,13 +89,18 @@ header{
     flex-direction: column;
     box-sizing: border-box;
     gap: 25px;
-    padding: 50px 180px;
+    padding:0px;
+}
+
+.fonctionnement section {
+    padding:0px 20px;
 }
 
 .bouton-containter{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding-left: 12px;
 }
 
 .BoutonFonctionnement{
@@ -156,43 +166,29 @@ footer h3{
     font-family: 'Shrikhand' , serif;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
 
-    body{
-        margin:0px;
-    }
 
-    header img{
-        height: 44px;
-        padding: 14px 89px ;
-    }
+/*********************************** pour la version desktop ***********************************************/
+@media (min-width: 1044px) {
 
 
     /* Section Présentation*/
     .presentation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Section Fonctionnement */
     .fonctionnement{
-        padding:0px;
-    }
-
-    .fonctionnement section {
-        padding:0px 20px;
+        padding: 50px 180px;
     }
 
     .bouton-containter{
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 23px;
-        padding-left: 12px;
-        
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
     }
 }
 

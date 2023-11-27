@@ -1,0 +1,198 @@
+/****** General ***********/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-bg-color: #F6F6F6;
+    --sec-bg-color: white;
+} 
+
+body{
+    background-color:var(--main-bg-color);
+    margin:0px;
+}
+
+
+h1{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3{
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--sec-bg-color);
+}
+
+.Location{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    gap: 17px;
+    background-color:#EAEAEA ;
+
+}
+
+/* Section Présentation*/
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.presentation .bouton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+    /* Shadow/Button */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.presentation span{
+    color: var(--White, #FFF);
+    font-size: 16px;
+    text-align: center;
+    padding:13px 18.75px ;
+}
+
+/* Section Fonctionnement */
+.fonctionnement{
+    background-color:var(--sec-bg-color);
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 25px;
+    padding: 50px 180px;
+}
+
+.bouton-containter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.BoutonFonctionnement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap:20px;
+    height: 72.379px;
+    border-radius: 20px;
+    background: var(--Background, #F6F6F6);
+    /* Shadow/Instructions */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Section Restaurant */
+a{
+    height: 251px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* height: 251px; */
+    border-radius: 15px;
+    align-self: stretch;
+    /* Shadow/Card */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card img{
+    object-fit: cover;
+    height: 231px;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 13px;
+    border: 1px dashed #a80505;
+}
+
+.card-subtitle{
+    font-size: 17px;
+    color: #000;
+}
+
+
+/* footer */
+footer{
+    background-color: #353535;
+    color: white;
+}
+
+footer h3{
+    font-family: 'Shrikhand' , serif;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    body{
+        margin:0px;
+    }
+
+    header img{
+        height: 44px;
+        padding: 14px 89px ;
+    }
+
+
+    /* Section Présentation*/
+    .presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    /* Section Fonctionnement */
+    .fonctionnement{
+        padding:0px;
+    }
+
+    .fonctionnement section {
+        padding:0px 20px;
+    }
+
+    .bouton-containter{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 23px;
+        padding-left: 12px;
+        
+    }
+}
+

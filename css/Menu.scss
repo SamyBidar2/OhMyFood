@@ -1,0 +1,96 @@
+/****** General ***********/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-bg-color: #F6F6F6;
+    --sec-bg-color: white;
+} 
+
+img{
+    justify-content: cover;
+}
+
+body{
+    background-color:var(--main-bg-color);
+    margin:0px;
+}
+
+h1{
+    color: var(--Black, #101010);
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--sec-bg-color);
+    gap: 42px;
+}
+
+header img{
+    height: 44px;
+    padding: 14px 0px;
+}
+
+header i{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    width: 30px;
+}
+
+
+// Titre
+.MenuTitreContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+    border: 1px dashed #8aa805;
+}
+
+.MenuTitreContainer i { 
+    height: 27px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    border: 1px dashed #8aa805;
+}
+   
+
+// /* footer */
+// footer{
+//     display: flex;
+//     flex-direction: column;
+//     gap:16px;
+//     background-color: #353535;
+//     color: white;
+//     padding: 22px 25px;
+// }
+
+// footer h3{
+//     font-family: 'Shrikhand' , serif;
+//     margin: 0px;
+
+// }
+// .Footer-texte-icone{
+//     display: flex;
+//     gap:11px;
+// }
+
+// Footer i{
+//     height: 11px;
+// }

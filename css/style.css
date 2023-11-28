@@ -51,7 +51,7 @@ header img {
   height: 50px;
   width: 100%;
   gap: 17px;
-  background-color: #EAEAEA;
+  background: #EAEAEA;
 }
 
 /* Section Présentation*/
@@ -74,7 +74,7 @@ header img {
   margin: 0px;
 }
 
-.presentation .bouton {
+.bouton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +87,7 @@ header img {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.presentation span {
+.bouton span {
   color: var(--White, #FFF);
   font-size: 16px;
   text-align: center;
@@ -160,7 +160,6 @@ a {
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 18px;
-  border: 1px dashed #8aa805;
 }
 
 .card img {

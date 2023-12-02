@@ -87,7 +87,23 @@ header img{
     background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
     /* Shadow/Button */
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    &h:hover {
+        animation: animationOpacite 3s ease-in-out;
+    }
 }
+
+
+@keyframes animationOpacite {
+    0% {
+        opacity: 0; /* Opacité au début de l'animation */
+    }
+    100% {
+        opacity: 0.8; /* Opacité à la fin de l'animation */
+    }
+}
+
 .bouton span{
     color: var(--White, #FFF);
     font-size: 16px;
@@ -145,7 +161,7 @@ header img{
 }
 
 a{
-    height: 251px;
+    // height: 251px;
     width: 100%;
     text-decoration: none;
     color: #000;

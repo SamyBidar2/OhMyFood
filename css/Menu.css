@@ -12,11 +12,6 @@ img {
   justify-content: cover;
 }
 
-body {
-  background-color: var(--main-bg-color);
-  margin: 0px;
-}
-
 h1 {
   color: var(--Black, #101010);
   font-family: Shrikhand;
@@ -41,7 +36,7 @@ header img {
   padding: 14px 0px;
 }
 
-header i {
+header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +45,16 @@ header i {
   width: 30px;
 }
 
+.Couverture {
+  height: 275px;
+  object-fit: cover;
+}
+
 .MenuTitreContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
-  border: 1px dashed #8aa805;
 }
 
 .MenuTitreContainer i {
@@ -65,5 +64,37 @@ header i {
   justify-content: center;
   align-items: center;
   margin-right: 24px;
-  border: 1px dashed #8aa805;
+}
+
+.ContainerMenu {
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed #a80582;
+  gap: 40px;
+}
+
+.MenuSection-Titre {
+  text-transform: uppercase;
+  font-size: 27px;
+}
+
+hr {
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+  margin-left: 0;
+}
+
+section {
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 0px 10px;
+}
+
+.Price {
+  padding-right: 25px;
+}
+
+.card {
+  margin-bottom: 12px;
 }

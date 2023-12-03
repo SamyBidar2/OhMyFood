@@ -26,6 +26,7 @@ h1{
     line-height: normal;
 }
 
+// *************************  Header ************************************
 header{
     display: flex;
     flex-direction: row;
@@ -51,13 +52,13 @@ header a{
     // border: 1px dashed #3905a8;
 }
 
-// Image de couverture
+// *************************  Image de couverture ************************************
 .Couverture{
     height: 275px;
     object-fit: cover;
 }
 
-// Titre
+// *************************  Titre  ************************************
 .MenuTitreContainer{
     display:flex;
     justify-content: center;
@@ -72,10 +73,9 @@ header a{
     justify-content: center;
     align-items: center;
     margin-right: 24px;
-   
 }
 
-
+// *************************  MEnu  ************************************
 //container pour les cards Menu
 .ContainerMenu{
     display: flex;
@@ -108,9 +108,59 @@ hr{
     padding-right: 25px;
  }
 
+
  .card{
     margin-bottom: 12px;
+    border: 1px dashed #8aa805
  }
+
+ .card-content {
+    gap: 5px;
+    border: 1px dashed #0536a8;
+}
+
+ .MenuCheck{
+    // background-color: #99E2D0;
+    border: 1px dashed #a80510;
+ }
+
+ .MenuCheck i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 69px;
+    width: 59px;
+    
+    // z-index: 1;
+
+    &:hover{
+        visibility:visible;
+    }
+}
+
+
+// *************************  Bouton Commander  ************************************
+.ValiderCommande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #a80510;
+}
+
+
+
+//  .card{
+//     display: flex;
+//     flex-direction: column;
+//     background-color: white;
+//     border-radius: 15px;
+//     align-self: stretch;
+//     /* Shadow/Card */
+//     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+//     margin-bottom: 18px;
+//     // ;
+// }
 
 
  

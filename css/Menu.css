@@ -97,4 +97,34 @@ section {
 
 .card {
   margin-bottom: 12px;
+  border: 1px dashed #8aa805;
+}
+
+.card-content {
+  gap: 5px;
+  border: 1px dashed #0536a8;
+}
+
+.MenuCheck {
+  border: 1px dashed #a80510;
+}
+
+.MenuCheck i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 69px;
+  width: 59px;
+}
+
+.MenuCheck i:hover {
+  visibility: visible;
+}
+
+.ValiderCommande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #a80510;
 }

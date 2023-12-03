@@ -86,22 +86,13 @@ header img {
   /* Shadow/Button */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition-property: transform;
-  transition-duration: 1000ms;
+  transition-duration: 400ms;
 }
 
-.boutonh:hover {
-  animation: animationOpacite 3s ease-in-out;
-}
-
-@keyframes animationOpacite {
-  0% {
-    opacity: 0;
-    /* Opacité au début de l'animation */
-  }
-  100% {
-    opacity: 0.8;
-    /* Opacité à la fin de l'animation */
-  }
+.bouton:hover {
+  opacity: 80%;
+  transform: scale(1.01);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
 .bouton span {
@@ -206,6 +197,7 @@ a {
   font-size: 17px;
   margin-top: 0px;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .card-like {
@@ -215,6 +207,28 @@ a {
 .card i {
   height: 21px;
   width: 22px;
+}
+
+svg {
+  height: 21px;
+  width: 22px;
+  fill: none;
+  transition-property: fill;
+  transition-duration: 1000ms;
+}
+
+svg:hover {
+  animation: animation-coeur 1s;
+}
+
+@keyframes animation-coeur {
+  0% {
+    fill: none;
+    /* Couleur de remplissage au début de l'animation */
+  }
+  100% {
+    fill: red;
+  }
 }
 
 /* footer */

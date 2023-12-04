@@ -82,32 +82,20 @@ header img{
     align-items: center;
     align-content: center;
     height: 50px;
-    width:218px ;
+    width: 218px ;
     border-radius: 25px;
     background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
     /* Shadow/Button */
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    transition-property: transform;
-    transition-duration: 400ms;
+    transition-property: opacity, box-shadow;
+    transition-duration: 1s;
     
     &:hover {
-        // animation: animationOpacite 3s ease-in-out;
         opacity: 80%;
-        transform: scale(1.01);
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
     }
     
 }
-
-
-// @keyframes animationOpacite {
-//     0% {
-//         opacity: 0.7; /* Opacité au début de l'animation */
-//     }
-//     100% {
-//         opacity: 0.8; /* Opacité à la fin de l'animation */
-//     }
-// }
 
 .bouton span{
     color: var(--White, #FFF);
@@ -179,7 +167,7 @@ a{
     border: 1px dashed #a80505;
 }
 
-.card{
+article{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -191,7 +179,7 @@ a{
     // border: 1px dashed #8aa805;
 }
 
-.card img{
+article img{
     object-fit: cover;
     height: 231px;
     width: 100%;
@@ -230,36 +218,56 @@ a{
 
 .card-like{
     padding-right: 25px;
+    z-index:1;
 }
 
-.card i{
+article i{
     height: 21px;
     width: 22px;
-}
-
-svg{
-    height: 21px;
-    width: 22px;
-    fill:none;
-    transition-property: fill;
-    transition-duration: 1000ms;
-
-    &:hover{
-        animation: animation-coeur 1s;
     
+}
+
+.SectionRestaurant i{
+    // color:#101010;
+}
+
+.coeurgradient{
+    opacity: 0;
+    background: linear-gradient(#9356DC, #FF79DA);
+    // background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: opacity 1s;
+
+    &:active{
+        opacity: 1;
     }
 }
 
-$gradient: linear-gradient(to bottom, #9356DC, #FF79DA);
 
-@keyframes animation-coeur {
-    0% {
-        fill: none; /* Couleur de remplissage au début de l'animation */
-    }
-    100% {
-        fill: red /* Couleur de remplissage à la fin de l'animation */
-    }
-}
+// svg{
+//     height: 21px;
+//     width: 22px;
+//     fill:none;
+//     transition-property: fill;
+//     transition-duration: 1000ms;
+
+//     &:hover{
+//         animation: animation-coeur 1s;
+    
+//     }
+// }
+
+// $gradient: linear-gradient(to bottom, #9356DC, #FF79DA);
+
+// @keyframes animation-coeur {
+//     0% {
+//         fill: none; /* Couleur de remplissage au début de l'animation */
+//     }
+//     100% {
+//         fill: red /* Couleur de remplissage à la fin de l'animation */
+//     }
+// }
 
 
 

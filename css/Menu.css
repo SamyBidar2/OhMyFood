@@ -45,6 +45,10 @@ header a {
   width: 30px;
 }
 
+header i {
+  font-size: 30px;
+}
+
 .Couverture {
   height: 275px;
   object-fit: cover;
@@ -58,18 +62,16 @@ header a {
 }
 
 .MenuTitreContainer i {
-  height: 27px;
-  width: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 24px;
+  font-size: 22px;
 }
 
 .ContainerMenu {
   display: flex;
   flex-direction: column;
-  border: 1px dashed #a80582;
   gap: 40px;
 }
 
@@ -91,13 +93,24 @@ section {
   padding: 0px 10px;
 }
 
+span {
+  font-weight: 700;
+}
+
 .Price {
   padding-right: 25px;
 }
 
+.ligneMenu {
+  display: flex;
+  border: 1px dashed #a80582;
+}
+
 .card {
+  justify-content: flex-end;
   margin-bottom: 12px;
   border: 1px dashed #8aa805;
+  text-overflow: hidden;
 }
 
 .card-content {
@@ -106,20 +119,31 @@ section {
 }
 
 .MenuCheck {
-  border: 1px dashed #a80510;
-}
-
-.MenuCheck i {
+  background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 69px;
+  height: 77px;
   width: 59px;
+  border: 1px dashed #a80510;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-.MenuCheck i:hover {
-  visibility: visible;
+.rond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.MenuCheck i {
+  font-size: 14px;
 }
 
 .ValiderCommande {

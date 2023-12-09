@@ -25,6 +25,12 @@ h3{
     font-size: 18px;
 }
 
+a{
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -37,12 +43,13 @@ header{
     flex-direction: column;
     align-items: center;
     background-color: var(--sec-bg-color);
-}
 
-header img{
-    height: 44px;
-    padding: 14px 89px;
+    & img{
+        height: 44px;
+        padding: 14px 89px;
+    }
 }
+ 
 
 .Location{
     display:flex;
@@ -53,8 +60,6 @@ header img{
     width: 100%;
     gap: 17px;
     background:#EAEAEA;
-    // border-top: ;
-
 }
 
 /* Section Présentation*/
@@ -65,16 +70,18 @@ header img{
     align-items: center;
     align-content: center;
     gap:18px;
+
+    & p{
+        margin: 0px
+    }
+
+    & .presentation-texte{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-.presentation-texte{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.presentation p{
-    margin: 0px
-}
 
 .bouton{
     display: flex;
@@ -95,15 +102,15 @@ header img{
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
     }
     
+    & span{
+        color: var(--White, #FFF);
+        font-size: 16px;
+        text-align: center;
+        min-width: 315px;
+        padding:13px 18.75px;
+    }
 }
 
-.bouton span{
-    color: var(--White, #FFF);
-    font-size: 16px;
-    text-align: center;
-    min-width: 315px;
-    padding:13px 18.75px;
-}
 
 /* Section Fonctionnement */
 .fonctionnement{
@@ -114,57 +121,79 @@ header img{
     box-sizing: border-box;
     gap: 25px;
     padding:0px;
+
+    & i{
+        color:#7E7E7E;
+        font-size: 19px;
+        width: 20px;
+        text-align: center;
+    }
+
+    & section {
+        padding:0px 20px;
+        margin-bottom: 50px;
+        position: relative; // pour pouvoir fixer le chiffre à 20px du bord, càd centré sur le bord du bouton et aligné avec la lettre F de Fonctionnement
+    }
+
+    & .bouton-containter{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 23px;
+        padding-left: 12px;
+        
+    }
+
+    & .BoutonFonctionnement{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        height: 72.379px;
+        border-radius: 20px;
+        background: var(--Background, #F6F6F6);
+        /* Shadow/Instructions */
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        
+    }
+
+    & .ContenuBouton{
+        display: flex;
+        gap:20px;
+        width:250px;
+    }
+
+    & .Chiffre{
+        width: 24px;
+        height: 24px;
+        background-color: #9356DC;
+        border-radius: 50%;
+        font-size: 14.182px;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position:absolute; // pour fixer la position. 
+        left:20px;
+    }
 }
-
-
-.fonctionnement section {
-    padding:0px 20px;
-    margin-bottom: 50px;
-}
-
-.bouton-containter{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 23px;
-    padding-left: 12px;
-}
-
-.BoutonFonctionnement{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    gap:20px;
-    height: 72.379px;
-    border-radius: 20px;
-    background: var(--Background, #F6F6F6);
-    /* Shadow/Instructions */
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-}
-
 
 /* Section Restaurant */
 .SectionRestaurant{
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px 18px;
 }
 
-a{
-    // height: 251px;
-    width: 100%;
-    text-decoration: none;
-    color: #000;
-}
+
 
 .Card-Container{
     // display: grid;
-    // grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;  // Penser à supprimer cette classe si elle reste vide
     // margin-bottom: 18px;
-    border: 1px dashed #a80505;
+    //border: 1px dashed #a80505;
 }
 
 article{
@@ -176,33 +205,42 @@ article{
     /* Shadow/Card */
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     margin-bottom: 18px;
-    // border: 1px dashed #8aa805;
+    position: relative;
+
+    & img{
+        object-fit: cover;
+        height: 231px;
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+
+    & i{
+        font-size: 22px;
+        position: absolute;
+        right: 25px;
+        bottom: 33px;
+    }
+
+    & .card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 13px;
+        gap: 13px;
+    }
+
+    & .card-like{
+        text-align: center;
+        z-index:1;
+        position: relative;
+    }
+    
 }
 
-article img{
-    object-fit: cover;
-    height: 231px;
-    width: 100%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-
-}
-.card-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 13px;
-    gap: 13px;
-    // border: 1px dashed #0536a8;
-}
-
-// .Card-texte{
-//     display: flex;
-//     flex-direction: column; //remplacé par un margin bottom en bas du titre
-//     gap:5px;
-// }
 
 .card-title{
     margin-top: 16px;
@@ -216,20 +254,7 @@ article img{
     width: 100%;
 }
 
-.card-like{
-    padding-right: 25px;
-    z-index:1;
-}
 
-article i{
-    height: 21px;
-    width: 22px;
-    
-}
-
-.SectionRestaurant i{
-    // color:#101010;
-}
 
 .coeurgradient{
     opacity: 0;
@@ -245,32 +270,6 @@ article i{
 }
 
 
-// svg{
-//     height: 21px;
-//     width: 22px;
-//     fill:none;
-//     transition-property: fill;
-//     transition-duration: 1000ms;
-
-//     &:hover{
-//         animation: animation-coeur 1s;
-    
-//     }
-// }
-
-// $gradient: linear-gradient(to bottom, #9356DC, #FF79DA);
-
-// @keyframes animation-coeur {
-//     0% {
-//         fill: none; /* Couleur de remplissage au début de l'animation */
-//     }
-//     100% {
-//         fill: red /* Couleur de remplissage à la fin de l'animation */
-//     }
-// }
-
-
-
 /* footer */
 footer{
     display: flex;
@@ -279,21 +278,24 @@ footer{
     background-color: #353535;
     color: white;
     padding: 22px 25px;
+
+    & h3{
+        font-family: 'Shrikhand' , serif;
+        margin: 0px;
+    }
+
+    & i{
+        height: 11px;
+    }
+
+    & .Footer-texte-icone{
+        display: flex;
+        gap:11px;
+    }
 }
 
-footer h3{
-    font-family: 'Shrikhand' , serif;
-    margin: 0px;
 
-}
-.Footer-texte-icone{
-    display: flex;
-    gap:11px;
-}
 
-Footer i{
-    height: 11px;
-}
 
 
 

@@ -25,6 +25,12 @@ h3 {
   font-size: 18px;
 }
 
+a {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -64,14 +70,14 @@ header img {
   gap: 18px;
 }
 
-.presentation-texte {
+.presentation p {
+  margin: 0px;
+}
+
+.presentation .presentation-texte {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.presentation p {
-  margin: 0px;
 }
 
 .bouton {
@@ -113,29 +119,57 @@ header img {
   padding: 0px;
 }
 
+.fonctionnement i {
+  color: #7E7E7E;
+  font-size: 19px;
+  width: 20px;
+  text-align: center;
+}
+
 .fonctionnement section {
   padding: 0px 20px;
   margin-bottom: 50px;
+  position: relative;
 }
 
-.bouton-containter {
+.fonctionnement .bouton-containter {
   display: grid;
   grid-template-columns: 1fr;
   gap: 23px;
   padding-left: 12px;
 }
 
-.BoutonFonctionnement {
+.fonctionnement .BoutonFonctionnement {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  gap: 20px;
   height: 72.379px;
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
   /* Shadow/Instructions */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.fonctionnement .ContenuBouton {
+  display: flex;
+  gap: 20px;
+  width: 250px;
+}
+
+.fonctionnement .Chiffre {
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  font-size: 14.182px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  left: 20px;
 }
 
 /* Section Restaurant */
@@ -147,16 +181,6 @@ header img {
   padding: 0px 18px;
 }
 
-a {
-  width: 100%;
-  text-decoration: none;
-  color: #000;
-}
-
-.Card-Container {
-  border: 1px dashed #a80505;
-}
-
 article {
   display: flex;
   flex-direction: column;
@@ -166,6 +190,7 @@ article {
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 18px;
+  position: relative;
 }
 
 article img {
@@ -176,7 +201,14 @@ article img {
   border-top-left-radius: 15px;
 }
 
-.card-content {
+article i {
+  font-size: 22px;
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+}
+
+article .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -184,6 +216,12 @@ article img {
   box-sizing: border-box;
   padding-left: 13px;
   gap: 13px;
+}
+
+article .card-like {
+  text-align: center;
+  z-index: 1;
+  position: relative;
 }
 
 .card-title {
@@ -197,16 +235,6 @@ article img {
   margin-top: 0px;
   margin-bottom: 16px;
   width: 100%;
-}
-
-.card-like {
-  padding-right: 25px;
-  z-index: 1;
-}
-
-article i {
-  height: 21px;
-  width: 22px;
 }
 
 .coeurgradient {
@@ -236,13 +264,13 @@ footer h3 {
   margin: 0px;
 }
 
-.Footer-texte-icone {
-  display: flex;
-  gap: 11px;
+footer i {
+  height: 11px;
 }
 
-Footer i {
-  height: 11px;
+footer .Footer-texte-icone {
+  display: flex;
+  gap: 11px;
 }
 
 /*********************************** pour la version desktop ***********************************************/

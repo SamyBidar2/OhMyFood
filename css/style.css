@@ -224,13 +224,13 @@ article .card-like {
   position: relative;
 }
 
-.card-title {
+article .card-title {
   margin-top: 16px;
   margin-bottom: 5px;
   max-width: 267px;
 }
 
-.card-subtitle {
+article .card-subtitle {
   font-size: 17px;
   margin-top: 0px;
   margin-bottom: 16px;
@@ -240,6 +240,7 @@ article .card-like {
 .coeurgradient {
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transition: opacity 1s;

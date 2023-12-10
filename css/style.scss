@@ -238,28 +238,30 @@ article{
         z-index:1;
         position: relative;
     }
+
+    .card-title{
+        margin-top: 16px;
+        margin-bottom: 5px;
+        max-width: 267px;
+    }
+    .card-subtitle{
+        font-size: 17px;
+        margin-top: 0px;
+        margin-bottom: 16px;
+        width: 100%;
+    }
     
 }
 
 
-.card-title{
-    margin-top: 16px;
-    margin-bottom: 5px;
-    max-width: 267px;
-}
-.card-subtitle{
-    font-size: 17px;
-    margin-top: 0px;
-    margin-bottom: 16px;
-    width: 100%;
-}
+
 
 
 
 .coeurgradient{
     opacity: 0;
     background: linear-gradient(#9356DC, #FF79DA);
-    // background-clip: text;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     transition: opacity 1s;

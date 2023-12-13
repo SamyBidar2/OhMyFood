@@ -27,6 +27,16 @@ h1{
     line-height: normal;
 }
 
+h2{
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
 // *************************  Header ************************************
 header{
     display: flex;
@@ -64,6 +74,14 @@ header{
     object-fit: cover;
 }
 
+// img{
+//     object-fit: cover;
+//     height: 231px;
+//     width: 100%;
+//     border-top-right-radius: 15px;
+//     border-top-left-radius: 15px;
+// }
+
 // *************************  Titre  ************************************
 .MenuTitreContainer{
     display:flex;
@@ -91,11 +109,6 @@ header{
 
 
 // section Entrées
-.MenuSection-Titre{
-    text-transform: uppercase;
-    font-size: 27px;
-}
-
 hr{
     width: 40px;
     height: 3px;
@@ -108,42 +121,24 @@ hr{
     padding: 0px 10px;
     // border: 1px dashed #8aa805;
  }
-
- span{
-    font-weight: 700; 
- }
-
- .Price{
-    display: flex;
-    // justify-content: space-between;
-    padding-right: 25px;
- }
-
-
+ 
 .ligneMenu{
     display: flex;
-    border: 1px dashed #a80582;
+    // border: 1px dashed #a80582;
 }
 
 
  article{
     display: flex;
     flex-direction: column;
+    align-self: stretch;
     background-color: white;
     border-radius: 15px;
-    align-self: stretch;
-    /* Shadow/Card */
+    width: 100%;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    margin-bottom: 18px;
+    // margin-bottom: 18px;
     position: relative;
-
-    & img{
-        object-fit: cover;
-        height: 231px;
-        width: 100%;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
-    }
+    // border: 1px dashed #0805a8;
 
 
     & i{
@@ -153,56 +148,74 @@ hr{
         bottom: 33px;
     }
 
-    &.card{
-        justify-content: flex-end;
-        margin-bottom: 12px;
-        border: 1px dashed #8aa805;
-        text-overflow: hidden;
+    & .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        align-content: center;
+        box-sizing: border-box;
+        padding: 15px;
+        gap: 5px;
+        height: 69px;
+        width: 100%;
+        // border: 2px solid #90a805;
+    }
+
+    & h3{
+        margin: 0px;
+        color: #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 18px;
+        width: 100%;
+        // border: 1px dashed #0805a8;
+    }
+
+    & p{
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
     }
 
-    & .card-content {
+    & .Price{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        box-sizing: border-box;
-        padding-left: 13px;
-        gap: 5px;
-    }
-    &.card-title{
-        margin-top: 16px;
-        margin-bottom: 5px;
-        max-width: 267px;
-    }
-    &.card-subtitle{
-        font-size: 17px;
-        margin-top: 0px;
-        margin-bottom: 16px;
+        gap:5px;
         width: 100%;
+        // border: 1px dashed #a84105;
+     }
+     
+    & span{
+        width: 50px;
+        margin-bottom: 0px;
+        color: #353535;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 15.043px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        // border: 1px dashed #a805a0;
     }
-    
 }
 
 
 
-
- .card:hover + .MenuCheck{
-    background-color: #99E2D0;
-    animation-name: slide 1s;
+article:active + .MenuCheck{
+    // background-color: #99E2D0;
+    margin-right: 0px;
+    width: 59px;
+    display: flex;
 }
 
- @keyframes slide{
-    from{
-        transition: margin-right(-60px);
-        // display: none;
-    }
-
-    to {
-        transition: margin-right(0px);
-        // display: flex;
-    }
- }
  
 
  .MenuCheck{
@@ -212,17 +225,19 @@ hr{
     align-items: center;
     align-content: center;
     height: 77px;
-    width: 59px;
+    width: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    // overflow: hidden;
     margin-right: -60px;  
+    transition: 1s;
+    z-index: 1;
 
     & i{
         font-size: 14px;
+        color: #99E2D0;
     }
 
-    &  .rond{
+    & .rond{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -241,5 +256,6 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
     border: 1px dashed #a80510;
 }

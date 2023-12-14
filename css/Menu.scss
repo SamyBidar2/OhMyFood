@@ -1,40 +1,20 @@
-@Import url(style.scss);
-/****** General ***********/
-* {
-    font-family: 'Roboto', sans-serif;
-}
 
-:root {
-    --main-bg-color: #F6F6F6;
-    --sec-bg-color: white;
-} 
-
-img{
-    justify-content: cover;
-}
-
-body{
-    // background-color:var(--main-bg-color);
-    // margin:0px;
-}
+@import '_Commun.scss';
+// @import '_BoutonViolet.scss';
+// @import '_Footer.scss';
 
 h1{
-    color: var(--Black, #101010);
     font-family: Shrikhand;
     font-size: 28px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 h2{
-    color: #000;
     font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
+    font-size: 16px; 
     font-weight: 300;
-    line-height: normal;
     text-transform: uppercase;
+    margin:0px;
 }
 
 // *************************  Header ************************************
@@ -57,6 +37,7 @@ header{
         justify-content:center;
         align-items: center;
         align-content: center;
+        text-decoration: none;
         height: 30px;
         width: 30px;
         // border: 1px dashed #3905a8;
@@ -69,42 +50,53 @@ header{
  
 
 // *************************  Image de couverture ************************************
+main{
+    position: relative;
+}
 .Couverture{
     height: 275px;
-    object-fit: cover;
+    width: 100%;
+    position:absolute;
 }
-
-// img{
-//     object-fit: cover;
-//     height: 231px;
-//     width: 100%;
-//     border-top-right-radius: 15px;
-//     border-top-left-radius: 15px;
-// }
 
 // *************************  Titre  ************************************
 .MenuTitreContainer{
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap:24px;
+    position: relative;
+    padding: 0px 10px;
+    
+    .card-like{
+        display: flex;
+        position: absolute;
+        box-sizing: border-box;
+        top:25px;
+        bottom:25px;
+        right: 24px;
+        border: 1px dashed #2305a8;
+    }
 
     & i { 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 24px;
+        position: absolute;
+        right: 10px;
         font-size: 22px;
+        border: 1px dashed #7da805;
     }
 }
 
 
 // *************************  MEnu  ************************************
 //container pour les cards Menu
-.ContainerMenu{
+.Containerprincipal{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    // margin-top: -50px;
+    border: 1px dashed #8aa805;
 }
 
 
@@ -114,8 +106,13 @@ hr{
     height: 3px;
     background: #99E2D0;
     margin-left:0;
+    margin-top: 6px;
+    margin-bottom: 12px;
 }
+
  section{
+    display: flex;
+    flex-direction: column;
     gap:12px;
     box-sizing: border-box;
     padding: 0px 10px;
@@ -124,99 +121,85 @@ hr{
  
 .ligneMenu{
     display: flex;
-    // border: 1px dashed #a80582;
-}
-
-
- article{
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    background-color: white;
-    border-radius: 15px;
     width: 100%;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    // margin-bottom: 18px;
-    position: relative;
-    // border: 1px dashed #0805a8;
+    // border: 1px dashed #a80582;
 
-
-    & i{
-        font-size: 22px;
-        position: absolute;
-        right: 25px;
-        bottom: 33px;
-    }
-
-    & .card-content {
+    & article{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        align-content: center;
-        box-sizing: border-box;
-        padding: 15px;
-        gap: 5px;
-        height: 69px;
+        align-self: stretch;
+        background-color: white;
+        border-radius: 15px;
         width: 100%;
-        // border: 2px solid #90a805;
-    }
-
-    & h3{
-        margin: 0px;
-        color: #000;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-size: 18px;
-        width: 100%;
-        // border: 1px dashed #0805a8;
-    }
-
-    & p{
-        font-size: 15px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-    }
-
-    & .Price{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap:5px;
-        width: 100%;
-        // border: 1px dashed #a84105;
-     }
-     
-    & span{
-        width: 50px;
-        margin-bottom: 0px;
-        color: #353535;
-        text-align: center;
-        font-family: Roboto;
-        font-size: 15.043px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        // border: 1px dashed #a805a0;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    
+        & i{
+            font-size: 22px;
+            position: absolute;
+            right: 25px;
+            bottom: 33px;
+        }
+    
+        & .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            align-content: center;
+            box-sizing: border-box;
+            padding: 15px;
+            gap: 5px;
+            height: 69px;
+            width: 100%;
+        }
+    
+        & h3{
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    
+        & p{
+            font-size: 15px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    
+        & .Price{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap:5px;
+            width: 100%;
+            z-index: 1;
+            // border: 1px dashed #a84105;
+         }
+         
+        & span{
+            width: 50px;
+            margin-bottom: 0px;
+            color: #353535;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 15.043px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            // border: 1px dashed #a805a0;
+        }
     }
 }
-
-
 
 article:active + .MenuCheck{
-    // background-color: #99E2D0;
     margin-right: 0px;
     width: 59px;
-    display: flex;
+    display: flex; 
 }
-
- 
 
  .MenuCheck{
     background-color: #99E2D0;
@@ -224,13 +207,13 @@ article:active + .MenuCheck{
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 77px;
+    height: 69px;
     width: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-right: -60px;  
     transition: 1s;
-    z-index: 1;
+    z-index: 2;
 
     & i{
         font-size: 14px;
@@ -251,7 +234,7 @@ article:active + .MenuCheck{
 
 
 
-// *************************  Bouton Commander  ************************************
+// Bouton Commander
 .ValiderCommande{
     display: flex;
     justify-content: center;

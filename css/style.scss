@@ -86,8 +86,6 @@ header{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    height: 440px;
-    // gap: 25px;
     padding-top:48px;
     padding-bottom: 68px;
     
@@ -101,17 +99,13 @@ header{
 
     & section {
         padding:0px 20px;
-        // margin-bottom: 50px;
-        height: 324px;
-        position: relative; // pour pouvoir fixer le chiffre à 20px du bord, càd centré sur le bord du bouton et aligné avec la lettre F de Fonctionnement
     }
 
     & .bouton-containter{
         display: grid;
         grid-template-columns: 1fr;
         gap: 23px;
-        padding-left: 12px;
-        
+        padding-left: 12px;  
     }
 
     & .BoutonFonctionnement{
@@ -122,12 +116,14 @@ header{
         height: 72.379px;
         border-radius: 20px;
         background: var(--Background, #F6F6F6);
-        /* Shadow/Instructions */
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        position: relative; // pour pouvoir fixer le chiffre centré sur le bord du bouton et aligné avec la lettre F de Fonctionnement
     }
 
     & .ContenuBouton{
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap:20px;
         width:250px;
     }
@@ -144,7 +140,7 @@ header{
         align-items: center;
         align-content: center;
         position:absolute; // pour fixer la position. 
-        left:20px;
+        left:-11px;
     }
 }
 
@@ -157,7 +153,7 @@ header{
     margin-bottom: 54px;
     padding: 0px 18px;
     position: relative;
-    border:1px dashed #3905a8;
+    // border:1px dashed #3905a8;
 
     & article{
         display: flex;
@@ -177,23 +173,28 @@ header{
             border-top-left-radius: 15px;
         }
         & .Etiquette{
+            //positionnement
             display: flex;
             justify-content: center;
             align-items: center;
             align-content: center;
             text-align: center;
-            color: var(--Green-Font, #008766);
-            background: var(--Green, #99E2D0);
-            border-radius: 2px;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-            width: 80px;
-            height: 29px;
-            flex-shrink: 0;
-            font-size: 14px;
             z-index: 1;
             position: absolute;
+            right: 3px;
+            top:3px;
             margin-top:15px;
             margin-right:15px;
+            //style
+            width: 80px;
+            height: 29px;
+            border-radius: 2px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            color: var(--Green-Font, #008766);
+            background: var(--Green, #99E2D0);
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: 500;
         }
     
         & i{
@@ -234,19 +235,6 @@ header{
     }
 }
 
-// .coeurgradient{
-//     opacity: 0;
-//     background: linear-gradient(#9356DC, #FF79DA);
-//     background-clip: text;
-//     -webkit-background-clip: text;
-//     color: transparent;
-//     transition: opacity 1s;
-
-//     &:active{
-//         opacity: 1;
-//     }
-// }
-
 
 /*********************************** pour la version desktop ***********************************************/
 @media (min-width: 1044px) {
@@ -258,17 +246,46 @@ header{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     /* Section Fonctionnement */
     .fonctionnement{
         padding: 50px 180px;
+
+        & .bouton-containter{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 36.5px;
+        }
+
+        & .Chiffre{
+            width: 24px;
+            height: 24px;
+            background-color: #9356DC;
+            border-radius: 50%;
+            font-size: 14.182px;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            position:absolute; // pour fixer la position. 
+            left: -15px;
+        }
     }
 
-    .bouton-containter{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
+    .Restaurants{
+        padding: 0px 180px;
+
+        & .Card-Container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 50px;
+        }
     }
+ 
 }
 

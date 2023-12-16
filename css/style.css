@@ -31,6 +31,10 @@ h3 {
   width: 100%;
 }
 
+img {
+  object-fit: cover;
+}
+
 .bouton {
   display: flex;
   justify-content: center;
@@ -74,7 +78,10 @@ h3 {
 footer {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  bottom: 0;
   gap: 16px;
+  width: 100%;
   background-color: #353535;
   color: white;
   padding: 22px 25px;
@@ -83,15 +90,61 @@ footer {
 footer h3 {
   font-family: 'Shrikhand' , serif;
   margin: 0px;
+  width: 137.582px;
+  height: 27px;
+  flex-shrink: 0;
 }
 
-footer i {
-  height: 11px;
+footer p {
+  font-size: 15px;
+  margin: 0px;
 }
 
-footer .Footer-texte-icone {
+footer .liensFooter {
   display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+footer .liensFooter i {
+  width: 13px;
+  height: 13px;
+  font-size: 13px;
+}
+
+footer .liensFooter .Footer-texte-icone {
+  display: flex;
+  flex-direction: row;
   gap: 11px;
+  text-align: center;
+}
+
+@media (min-width: 1044px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: right;
+    padding: 25px 30px;
+  }
+  footer .liensFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+  }
+  footer .liensFooter i {
+    width: 15px;
+    height: 16px;
+    font-size: 13px;
+  }
+  footer .liensFooter .Footer-texte-icone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    gap: 11px;
+  }
 }
 
 /*général*/
@@ -171,7 +224,6 @@ header img {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  height: 440px;
   padding-top: 48px;
   padding-bottom: 68px;
 }
@@ -185,8 +237,6 @@ header img {
 
 .fonctionnement section {
   padding: 0px 20px;
-  height: 324px;
-  position: relative;
 }
 
 .fonctionnement .bouton-containter {
@@ -204,12 +254,14 @@ header img {
   height: 72.379px;
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
-  /* Shadow/Instructions */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .fonctionnement .ContenuBouton {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   width: 250px;
 }
@@ -226,7 +278,7 @@ header img {
   align-items: center;
   align-content: center;
   position: absolute;
-  left: 20px;
+  left: -11px;
 }
 
 /* Section Restaurant */
@@ -238,7 +290,6 @@ header img {
   margin-bottom: 54px;
   padding: 0px 18px;
   position: relative;
-  border: 1px dashed #3905a8;
 }
 
 .Restaurants article {
@@ -266,18 +317,21 @@ header img {
   align-items: center;
   align-content: center;
   text-align: center;
-  color: var(--Green-Font, #008766);
-  background: var(--Green, #99E2D0);
-  border-radius: 2px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 80px;
-  height: 29px;
-  flex-shrink: 0;
-  font-size: 14px;
   z-index: 1;
   position: absolute;
+  right: 3px;
+  top: 3px;
   margin-top: 15px;
   margin-right: 15px;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--Green-Font, #008766);
+  background: var(--Green, #99E2D0);
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .Restaurants article i {
@@ -324,14 +378,39 @@ header img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   /* Section Fonctionnement */
   .fonctionnement {
     padding: 50px 180px;
   }
-  .bouton-containter {
+  .fonctionnement .bouton-containter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 36.5px;
+  }
+  .fonctionnement .Chiffre {
+    width: 24px;
+    height: 24px;
+    background-color: #9356DC;
+    border-radius: 50%;
+    font-size: 14.182px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    left: -15px;
+  }
+  .Restaurants {
+    padding: 0px 180px;
+  }
+  .Restaurants .Card-Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 50px;
   }
 }

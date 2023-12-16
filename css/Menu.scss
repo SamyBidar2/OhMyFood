@@ -47,6 +47,10 @@ header{
         font-size: 30px;
     }
 }
+
+body{
+    position: relative;
+}
  
 
 // *************************  Image de couverture ************************************
@@ -56,7 +60,7 @@ main{
 .Couverture{
     height: 275px;
     width: 100%;
-    position:absolute;
+    position: relative;
 }
 
 // *************************  Titre  ************************************
@@ -67,22 +71,25 @@ main{
     gap:24px;
     position: relative;
     padding: 0px 10px;
+    margin-top: 32px;
     
     .card-like{
         display: flex;
         position: absolute;
         box-sizing: border-box;
-        top:25px;
-        bottom:25px;
+        top:10px;
+        // bottom:25px;
         right: 24px;
-        border: 1px dashed #2305a8;
     }
 
     & i { 
         position: absolute;
         right: 10px;
         font-size: 22px;
-        border: 1px dashed #7da805;
+    }
+
+    & h1{
+        margin: 0px;
     }
 }
 
@@ -93,10 +100,12 @@ main{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    // margin-top: -50px;
-    border: 1px dashed #8aa805;
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+    background-color: var(--main-bg-color);
+    position:fixed;
+    top:283px;
+    // border: 1px dashed #8aa805;
 }
 
 
@@ -232,13 +241,48 @@ article:active + .MenuCheck{
     }
  }
 
-
-
 // Bouton Commander
 .ValiderCommande{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    border: 1px dashed #a80510;
+}
+
+@media (min-width: 1044px) {
+    main{
+        display: flex;
+        justify-content: center;
+    }
+
+    .Containerprincipal{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1055px;
+    }
+
+    section{
+        width: 100%;
+        max-width: 634px;
+    }
+
+
+    .MenuTitreContainer{
+        margin-top: 32px;
+        border: 1px dashed #a80510;
+    
+        .card-like{
+            display: flex;
+            position: absolute;
+            box-sizing: border-box;
+            top:10px;
+            
+            // bottom:25px;
+            left: 330px;
+        }
+
+
+    }
+
 }

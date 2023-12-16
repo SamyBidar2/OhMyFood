@@ -82,21 +82,77 @@ footer{
     display: flex;
     flex-direction: column;
     gap:16px;
+    width: 100%;
     background-color: #353535;
     color: white;
     padding: 22px 25px;
+    position: fixed;
+    bottom:0;
 
     & h3{
         font-family: 'Shrikhand' , serif;
         margin: 0px;
+        width: 137.582px;
+        height: 27px;
+        flex-shrink: 0;
+    }
+   
+    & p{
+        font-size: 15px;
+        margin: 0px;
     }
 
-    & i{
-        height: 11px;
-    }
-
-    & .Footer-texte-icone{
+    & .liensFooter{
         display: flex;
-        gap:11px;
+        flex-direction: column;
+        gap:7px;
+
+        & i{
+            width: 13px;
+            height: 13px;
+            font-size: 13px;
+        }
+    
+        & .Footer-texte-icone{
+            display: flex;
+            flex-direction: row;
+            gap:11px;
+            text-align: center;
+        }
     }
+}
+
+
+@media (min-width: 1044px) {
+    footer{
+        flex-direction: row-reverse;
+        justify-content:right;
+        padding:25px 30px;
+
+
+        & .liensFooter{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            gap:7px;
+    
+            & i{
+                width: 15px;
+                height: 16px;
+                font-size: 13px;
+            }
+        
+            & .Footer-texte-icone{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 200px;
+                gap:11px;
+            }
+        }
+    }
+
+   
 }

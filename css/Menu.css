@@ -77,8 +77,6 @@ img {
 footer {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  bottom: 0;
   gap: 16px;
   width: 100%;
   background-color: #353535;
@@ -97,6 +95,7 @@ footer h3 {
 footer p {
   font-size: 15px;
   margin: 0px;
+  width: 130px;
 }
 
 footer .liensFooter {
@@ -111,11 +110,20 @@ footer .liensFooter i {
   font-size: 13px;
 }
 
+footer .liensFooter a {
+  font-size: 15px;
+  margin: 0px;
+  color: white;
+  text-decoration: none;
+  width: 130px;
+}
+
 footer .liensFooter .Footer-texte-icone {
   display: flex;
   flex-direction: row;
   gap: 11px;
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 1044px) {
@@ -191,6 +199,7 @@ header i {
 
 body {
   position: relative;
+  background-color: white;
 }
 
 main {
@@ -201,6 +210,17 @@ main {
   height: 275px;
   width: 100%;
   position: relative;
+}
+
+.Containerprincipal {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
+  background-color: var(--main-bg-color);
+  position: fixed;
+  top: 283px;
 }
 
 .MenuTitreContainer {
@@ -231,17 +251,6 @@ main {
   margin: 0px;
 }
 
-.Containerprincipal {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  border-radius: 40px 40px 0px 0px;
-  background-color: var(--main-bg-color);
-  position: fixed;
-  top: 283px;
-}
-
 hr {
   width: 40px;
   height: 3px;
@@ -257,6 +266,29 @@ section {
   gap: 12px;
   box-sizing: border-box;
   padding: 0px 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+#sectionentrees {
+  animation-delay: 300ms;
+}
+
+#sectionplats {
+  animation-delay: 550ms;
+}
+
+#sectiondesserts {
+  animation-delay: 800ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .ligneMenu {

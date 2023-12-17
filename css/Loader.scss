@@ -1,0 +1,25 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 40px;
+    padding-bottom: 8px;
+    // border:#9356DC 1px solid;
+    // background: linear-gradient(#9356DC, #FF79DA) 0 100%/0% 3px no-repeat;
+    background: linear-gradient(#9356DC, #FF79DA) 0 100%/0% 3px no-repeat;
+    animation: l2 2s linear infinite;
+
+  }
+  .loader:before {
+    content:""
+  }
+  @keyframes l2 {to{background-size: 100% 3px}}
+
+  .Loadercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border:#dc7c56 1px solid;
+  }

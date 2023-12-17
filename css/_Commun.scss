@@ -86,8 +86,8 @@ footer{
     background-color: #353535;
     color: white;
     padding: 22px 25px;
-    position: fixed;
-    bottom:0;
+    // position: fixed;
+    // bottom:0;
 
     & h3{
         font-family: 'Shrikhand' , serif;
@@ -100,7 +100,9 @@ footer{
     & p{
         font-size: 15px;
         margin: 0px;
+        width: 130px;
     }
+   
 
     & .liensFooter{
         display: flex;
@@ -112,12 +114,21 @@ footer{
             height: 13px;
             font-size: 13px;
         }
-    
+
+        & a{
+            font-size: 15px;
+            margin: 0px;
+            color: white;
+            text-decoration: none;
+            width: 130px;
+        }
+
         & .Footer-texte-icone{
             display: flex;
             flex-direction: row;
             gap:11px;
             text-align: center;
+            width: 100%;
         }
     }
 }
@@ -128,7 +139,6 @@ footer{
         flex-direction: row-reverse;
         justify-content:right;
         padding:25px 30px;
-
 
         & .liensFooter{
             display: flex;

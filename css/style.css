@@ -15,14 +15,10 @@ body {
 
 h1 {
   color: var(--Black, #101010);
-  font-style: normal;
-  line-height: normal;
 }
 
 h2 {
   color: #000;
-  font-style: normal;
-  line-height: normal;
 }
 
 h3 {
@@ -43,7 +39,7 @@ img {
   height: 50px;
   width: 218px;
   border-radius: 25px;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background: var(--Button-Gradient, linear-gradient(#FF79DA, #9356DC));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition-property: opacity, box-shadow;
   transition-duration: 1s;
@@ -195,6 +191,15 @@ header img {
   width: 100%;
   gap: 17px;
   background: #EAEAEA;
+  box-shadow: 4px 0px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.Location input {
+  border: none;
+  background-color: #EAEAEA;
+  color: var(--Grey, #353535);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /* Section Présentation*/
@@ -208,6 +213,17 @@ header img {
   gap: 27px;
   padding-top: 40px;
   padding-bottom: 57px;
+}
+
+@media (min-width: 1044px) {
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .presentation h1 {
@@ -236,6 +252,12 @@ header img {
   padding-bottom: 68px;
 }
 
+@media (min-width: 1044px) {
+  .fonctionnement {
+    padding: 50px 180px;
+  }
+}
+
 .fonctionnement i {
   color: #7E7E7E;
   font-size: 19px;
@@ -252,6 +274,14 @@ header img {
   grid-template-columns: 1fr;
   gap: 23px;
   padding-left: 12px;
+}
+
+@media (min-width: 1044px) {
+  .fonctionnement .bouton-containter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36.5px;
+  }
 }
 
 .fonctionnement .BoutonFonctionnement {
@@ -289,6 +319,23 @@ header img {
   left: -11px;
 }
 
+@media (min-width: 1044px) {
+  .fonctionnement .Chiffre {
+    width: 24px;
+    height: 24px;
+    background-color: #9356DC;
+    border-radius: 50%;
+    font-size: 14.182px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    left: -15px;
+  }
+}
+
 /* Section Restaurant */
 .Restaurants {
   display: flex;
@@ -298,6 +345,12 @@ header img {
   margin-bottom: 54px;
   padding: 0px 18px;
   position: relative;
+}
+
+@media (min-width: 1044px) {
+  .Restaurants {
+    padding: 0px 180px;
+  }
 }
 
 .Restaurants article {
@@ -378,43 +431,7 @@ header img {
   width: 100%;
 }
 
-/*********************************** pour la version desktop ***********************************************/
 @media (min-width: 1044px) {
-  /* Section Présentation*/
-  .presentation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  /* Section Fonctionnement */
-  .fonctionnement {
-    padding: 50px 180px;
-  }
-  .fonctionnement .bouton-containter {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 36.5px;
-  }
-  .fonctionnement .Chiffre {
-    width: 24px;
-    height: 24px;
-    background-color: #9356DC;
-    border-radius: 50%;
-    font-size: 14.182px;
-    color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    position: absolute;
-    left: -15px;
-  }
-  .Restaurants {
-    padding: 0px 180px;
-  }
   .Restaurants .Card-Container {
     display: grid;
     grid-template-columns: 1fr 1fr;

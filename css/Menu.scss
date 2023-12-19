@@ -51,13 +51,22 @@ header{
 body{
     position: relative;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    
 }
  
 
 // *************************  Image de couverture ************************************
 main{
     position: relative;
-    // height: 100%;
+    background-color: #F6F6F6;
+    height: 100%;
+    @media (min-width: 1044px) {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+    }
 }
 .Couverture{
     height: 275px;
@@ -71,13 +80,22 @@ main{
     flex-direction: column;
     gap: 40px;
     width: 100%;
-    // height: 100%;
     border-radius: 40px 40px 0px 0px;
     background-color: var(--main-bg-color);
-    position:fixed;
-    top:283px;
-    // border: 1px dashed #8aa805;
+    position:relative;
+    top:-40px;
+
+    @media (min-width: 1044px) {
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            max-width: 1055px;
+            top: 220px;
+    }
 }
+   
+
 
 // *************************  Titre  ************************************
 .MenuTitreContainer{
@@ -88,6 +106,11 @@ main{
     position: relative;
     padding: 0px 10px;
     margin-top: 32px;
+
+    @media (min-width: 1044px) {
+        margin-top: 32px;
+        border: 1px dashed #a80510;
+    }
     
     .card-like{
         display: flex;
@@ -96,6 +119,15 @@ main{
         top:10px;
         // bottom:25px;
         right: 24px;
+
+        @media (min-width: 1044px) {
+            display: flex;
+            position: absolute;
+            box-sizing: border-box;
+            top:10px;
+            // bottom:25px;
+            left: 330px;
+        }
     }
 
     & i { 
@@ -130,6 +162,11 @@ hr{
     // border: 1px dashed #8aa805;
     opacity: 0;
     animation: fadeIn 1s forwards;
+
+    @media (min-width: 1044px){
+            width: 100%;
+            max-width: 634px;
+    }
 }  
     //animation apparition des sections entrées, plats, desserts.
     #sectionentrees{
@@ -142,6 +179,10 @@ hr{
 
     #sectiondesserts{
         animation-delay: 800ms;
+    }
+
+    .ValiderCommande{
+        animation-delay: 1s;
     }
 
     @keyframes fadeIn {
@@ -186,10 +227,10 @@ hr{
             gap: 5px;
             height: 69px;
             width: 100%;
+            z-index:0;
         }
     
         & h3{
-            width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -203,6 +244,7 @@ hr{
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            transition: 2s;
         }
     
         & .Price{
@@ -211,7 +253,6 @@ hr{
             justify-content: space-between;
             gap:5px;
             width: 100%;
-            z-index: 1;
             // border: 1px dashed #a84105;
          }
          
@@ -220,25 +261,20 @@ hr{
             margin-bottom: 0px;
             color: #353535;
             text-align: center;
-            font-family: Roboto;
+            // font-family: Roboto;
             font-size: 15.043px;
-            font-style: normal;
+            // font-style: normal;
             font-weight: 700;
-            line-height: normal;
+            // line-height: normal;
+            // z-index: 2;
             // border: 1px dashed #a805a0;
         }
     }
 }
 
-article:active + .MenuCheck{
-    margin-right: 0px;
-    width: 59px;
-    display: flex; 
-}
-
- .MenuCheck{
+.MenuCheck{
     background-color: #99E2D0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -247,12 +283,15 @@ article:active + .MenuCheck{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-right: -60px;  
-    transition: 1s;
-    z-index: 2;
+    transition: width 1ms, margin-right 10ms;
+    opacity: 0;
+   
 
     & i{
         font-size: 14px;
         color: #99E2D0;
+        // opacity:0;
+        // transition: opacity 1ms;
     }
 
     & .rond{
@@ -265,50 +304,27 @@ article:active + .MenuCheck{
         border-radius: 50%;
         background-color: white;
     }
- }
+}
+
+//animation menu
+article:active + .MenuCheck{
+    margin-right: 0px;
+    width: 59px;
+    opacity: 1;
+}
+
+article:active{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 // Bouton Commander
 .ValiderCommande{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
-}
-
-@media (min-width: 1044px) {
-    main{
-        display: flex;
-        justify-content: center;
-    }
-
-    .Containerprincipal{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 1055px;
-    }
-
-    section{
-        width: 100%;
-        max-width: 634px;
-    }
-
-
-    .MenuTitreContainer{
-        margin-top: 32px;
-        border: 1px dashed #a80510;
-    
-        .card-like{
-            display: flex;
-            position: absolute;
-            box-sizing: border-box;
-            top:10px;
-            
-            // bottom:25px;
-            left: 330px;
-        }
-
-
-    }
-
+    margin-bottom: 00px;
 }

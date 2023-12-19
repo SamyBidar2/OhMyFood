@@ -14,14 +14,10 @@ body {
 
 h1 {
   color: var(--Black, #101010);
-  font-style: normal;
-  line-height: normal;
 }
 
 h2 {
   color: #000;
-  font-style: normal;
-  line-height: normal;
 }
 
 h3 {
@@ -42,7 +38,7 @@ img {
   height: 50px;
   width: 218px;
   border-radius: 25px;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background: var(--Button-Gradient, linear-gradient(#FF79DA, #9356DC));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition-property: opacity, box-shadow;
   transition-duration: 1s;
@@ -200,10 +196,22 @@ header i {
 body {
   position: relative;
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   position: relative;
+  background-color: #F6F6F6;
+  height: 100%;
+}
+
+@media (min-width: 1044px) {
+  main {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
 }
 
 .Couverture {
@@ -219,8 +227,19 @@ main {
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   background-color: var(--main-bg-color);
-  position: fixed;
-  top: 283px;
+  position: relative;
+  top: -40px;
+}
+
+@media (min-width: 1044px) {
+  .Containerprincipal {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    max-width: 1055px;
+    top: 220px;
+  }
 }
 
 .MenuTitreContainer {
@@ -233,12 +252,29 @@ main {
   margin-top: 32px;
 }
 
+@media (min-width: 1044px) {
+  .MenuTitreContainer {
+    margin-top: 32px;
+    border: 1px dashed #a80510;
+  }
+}
+
 .MenuTitreContainer .card-like {
   display: flex;
   position: absolute;
   box-sizing: border-box;
   top: 10px;
   right: 24px;
+}
+
+@media (min-width: 1044px) {
+  .MenuTitreContainer .card-like {
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    top: 10px;
+    left: 330px;
+  }
 }
 
 .MenuTitreContainer i {
@@ -270,6 +306,13 @@ section {
   animation: fadeIn 1s forwards;
 }
 
+@media (min-width: 1044px) {
+  section {
+    width: 100%;
+    max-width: 634px;
+  }
+}
+
 #sectionentrees {
   animation-delay: 300ms;
 }
@@ -280,6 +323,10 @@ section {
 
 #sectiondesserts {
   animation-delay: 800ms;
+}
+
+.ValiderCommande {
+  animation-delay: 1s;
 }
 
 @keyframes fadeIn {
@@ -324,10 +371,10 @@ section {
   gap: 5px;
   height: 69px;
   width: 100%;
+  z-index: 0;
 }
 
 .ligneMenu article h3 {
-  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -341,6 +388,7 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: 2s;
 }
 
 .ligneMenu article .Price {
@@ -349,7 +397,6 @@ section {
   justify-content: space-between;
   gap: 5px;
   width: 100%;
-  z-index: 1;
 }
 
 .ligneMenu article span {
@@ -357,22 +404,13 @@ section {
   margin-bottom: 0px;
   color: #353535;
   text-align: center;
-  font-family: Roboto;
   font-size: 15.043px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-}
-
-article:active + .MenuCheck {
-  margin-right: 0px;
-  width: 59px;
-  display: flex;
 }
 
 .MenuCheck {
   background-color: #99E2D0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -381,8 +419,8 @@ article:active + .MenuCheck {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-right: -60px;
-  transition: 1s;
-  z-index: 2;
+  transition: width 1ms, margin-right 10ms;
+  opacity: 0;
 }
 
 .MenuCheck i {
@@ -401,37 +439,23 @@ article:active + .MenuCheck {
   background-color: white;
 }
 
+article:active + .MenuCheck {
+  margin-right: 0px;
+  width: 59px;
+  opacity: 1;
+}
+
+article:active {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .ValiderCommande {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-}
-
-@media (min-width: 1044px) {
-  main {
-    display: flex;
-    justify-content: center;
-  }
-  .Containerprincipal {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1055px;
-  }
-  section {
-    width: 100%;
-    max-width: 634px;
-  }
-  .MenuTitreContainer {
-    margin-top: 32px;
-    border: 1px dashed #a80510;
-  }
-  .MenuTitreContainer .card-like {
-    display: flex;
-    position: absolute;
-    box-sizing: border-box;
-    top: 10px;
-    left: 330px;
-  }
+  margin-bottom: 00px;
 }

@@ -50,6 +50,15 @@ header{
     width: 100%;
     gap: 17px;
     background:#EAEAEA;
+    box-shadow: 4px 0px 0px 0px rgba(0, 0, 0, 0.15);
+
+    & input{
+         border: none;
+         background-color: #EAEAEA;
+         color: var(--Grey, #353535);
+         font-size: 16px;
+         font-weight: 500;
+    }
 }
 
 /* Section Présentation*/
@@ -63,6 +72,15 @@ header{
     gap:27px;
     padding-top: 40px;
     padding-bottom: 57px;
+
+    @media (min-width: 1044px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
     & h1{
         margin-bottom: 12px;
@@ -90,6 +108,9 @@ header{
     padding-top:48px;
     padding-bottom: 68px;
     
+    @media (min-width: 1044px) {
+        padding: 50px 180px;
+    }
 
     & i{
         color:#7E7E7E;
@@ -107,6 +128,12 @@ header{
         grid-template-columns: 1fr;
         gap: 23px;
         padding-left: 12px;  
+
+        @media (min-width: 1044px){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 36.5px;
+        }
     }
 
     & .BoutonFonctionnement{
@@ -142,7 +169,23 @@ header{
         align-content: center;
         position:absolute; // pour fixer la position. 
         left:-11px;
+
+        @media (min-width: 1044px){
+            width: 24px;
+            height: 24px;
+            background-color: #9356DC;
+            border-radius: 50%;
+            font-size: 14.182px;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            position:absolute; // pour fixer la position. 
+            left: -15px;
+        }
     }
+
 }
 
 /* Section Restaurant */
@@ -155,6 +198,10 @@ header{
     padding: 0px 18px;
     position: relative;
     // border:1px dashed #3905a8;
+
+    @media (min-width: 1044px) {
+        padding: 0px 180px;
+    }
 
     & article{
         display: flex;
@@ -212,7 +259,7 @@ header{
             align-items: center;
             box-sizing: border-box;
             padding-left: 13px;
-            gap: 13px;
+            gap: 13px;   
         }
     
         & .card-like{
@@ -234,59 +281,14 @@ header{
         }
         
     }
+
+    @media (min-width: 1044px)
+    {
+        .Card-Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 50px;
+        }
+    }
 }
-
-
-/*********************************** pour la version desktop ***********************************************/
-@media (min-width: 1044px) {
-
-
-    /* Section Présentation*/
-    .presentation{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    /* Section Fonctionnement */
-    .fonctionnement{
-        padding: 50px 180px;
-
-        & .bouton-containter{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 36.5px;
-        }
-
-        & .Chiffre{
-            width: 24px;
-            height: 24px;
-            background-color: #9356DC;
-            border-radius: 50%;
-            font-size: 14.182px;
-            color: #FFF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            position:absolute; // pour fixer la position. 
-            left: -15px;
-        }
-    }
-
-    .Restaurants{
-        padding: 0px 180px;
-
-        & .Card-Container{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 100px;
-            row-gap: 50px;
-        }
-    }
- 
-}
-

@@ -11,10 +11,37 @@
 
 header {
   background-color: var(--sec-bg-color);
+  padding: 14px 89px 13px 89px;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@media (min-width: 1044px) {
+  header {
+    gap: 572px;
+    height: 96px;
+    padding: 30px 0px 31.798px 0px;
+    align-self: stretch;
+  }
 }
 
 header img {
-  height: 44px;
+  height: 30px;
+  padding: 0px 19px 0px 16px;
+}
+
+@media (min-width: 1044px) {
+  header img {
+    height: 34.2px;
+  }
+}
+
+header i {
+  font-size: 20px;
+  color: black;
 }
 
 body {
@@ -24,10 +51,22 @@ body {
 
 h1 {
   color: var(--Black, #101010);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 1044px) {
+  h1 {
+    font-size: 40 px;
+  }
 }
 
 h2 {
   color: #000;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 h3 {
@@ -170,9 +209,8 @@ footer .liensFooter .Footer-texte-icone {
 }
 
 /*général*/
-h1 {
-  font-size: 24px;
-  font-weight: 700;
+h2 {
+  margin-bottom: 26px;
 }
 
 a {
@@ -187,13 +225,8 @@ main {
 }
 
 header {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-header img {
-  padding: 14px 89px;
+  height: 63px;
 }
 
 /* Barre selection ville*/
@@ -218,6 +251,10 @@ header img {
   font-weight: 500;
   text-align: center;
   width: 120px;
+}
+
+.Location i {
+  color: #353535;
 }
 
 /* Section Présentation*/
@@ -246,7 +283,6 @@ header img {
 
 .presentation h1 {
   margin-bottom: 12px;
-  margin-top: 0px;
 }
 
 .presentation p {
@@ -257,37 +293,41 @@ header img {
 .presentation .presentation-texte {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding-left: 34px;
+}
+
+@media (min-width: 1044px) {
+  .presentation .presentation-texte {
+    gap: 18px;
+  }
 }
 
 /* Section Fonctionnement */
-.fonctionnement {
+.Fonctionnement {
   background-color: var(--sec-bg-color);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-top: 48px;
-  padding-bottom: 68px;
+  padding: 48px 20px 68px 20px;
 }
 
 @media (min-width: 1044px) {
-  .fonctionnement {
+  .Fonctionnement {
     padding: 50px 180px;
   }
 }
 
-.fonctionnement i {
+.Fonctionnement i {
   color: #7E7E7E;
   font-size: 19px;
   width: 20px;
   text-align: center;
 }
 
-.fonctionnement section {
-  padding: 0px 20px;
-}
-
-.fonctionnement .bouton-containter {
+.Fonctionnement .bouton-containter {
   display: grid;
   grid-template-columns: 1fr;
   gap: 23px;
@@ -295,14 +335,14 @@ header img {
 }
 
 @media (min-width: 1044px) {
-  .fonctionnement .bouton-containter {
+  .Fonctionnement .bouton-containter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 36.5px;
   }
 }
 
-.fonctionnement .BoutonFonctionnement {
+.Fonctionnement .BoutonFonctionnement {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,7 +354,11 @@ header img {
   position: relative;
 }
 
-.fonctionnement .ContenuBouton {
+.Fonctionnement .BoutonFonctionnement:hover i {
+  color: #9356DC;
+}
+
+.Fonctionnement .ContenuBouton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +366,7 @@ header img {
   width: 250px;
 }
 
-.fonctionnement .Chiffre {
+.Fonctionnement .Chiffre {
   width: 24px;
   height: 24px;
   background-color: #9356DC;
@@ -338,7 +382,7 @@ header img {
 }
 
 @media (min-width: 1044px) {
-  .fonctionnement .Chiffre {
+  .Fonctionnement .Chiffre {
     width: 24px;
     height: 24px;
     background-color: #9356DC;
@@ -359,7 +403,7 @@ header img {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin-top: 34px;
+  margin-top: 54px;
   margin-bottom: 54px;
   padding: 0px 18px;
   position: relative;

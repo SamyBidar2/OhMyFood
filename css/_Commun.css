@@ -10,10 +10,36 @@
 
 header {
   background-color: var(--sec-bg-color);
+  padding: 14px 89px 13px 89px;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@media (min-width: 1044px) {
+  header {
+    height: 96px;
+    padding: 30px 0px 31.798px 0px;
+    align-self: stretch;
+  }
 }
 
 header img {
-  height: 44px;
+  height: 30px;
+  padding: 0px 19px 0px 16px;
+}
+
+@media (min-width: 1044px) {
+  header img {
+    height: 34.2px;
+  }
+}
+
+header i {
+  font-size: 20px;
+  color: black;
 }
 
 body {
@@ -23,10 +49,22 @@ body {
 
 h1 {
   color: var(--Black, #101010);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 1044px) {
+  h1 {
+    font-size: 40 px;
+  }
 }
 
 h2 {
   color: #000;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 h3 {

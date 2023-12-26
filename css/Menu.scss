@@ -10,35 +10,24 @@ h1{
 }
 
 h2{
-    font-family: Roboto;
     font-size: 16px; 
     font-weight: 300;
     text-transform: uppercase;
-    margin:0px;
 }
 
 // *************************  Header ************************************
 header{
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 42px;
-    
-    @media (min-width: 1044px) {
-        gap: 572px;
-    }
-    
-    & img{
-        padding: 14px 0px;
-        margin-right: 89px;
+    justify-content: space-between;
+    padding: 14px 89px 13px 17px;
+    // gap: 42px;
 
-        @media (min-width: 1044px) {
-            margin-right: 621px;
-            padding: 31px 0px;
-        }
-       
+    @media (min-width: 1044px) {
+        padding: 30px 621px 32.137px 17px;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-shrink: 0;
+        // gap: 572px;
     }
 
     & a{
@@ -52,9 +41,6 @@ header{
         // border: 1px dashed #3905a8;
     }
 
-    & i{
-        font-size: 30px;
-    }
 }
 
 body{
@@ -121,7 +107,7 @@ main{
 
     @media (min-width: 1044px) {
         margin-top: 32px;
-        border: 1px dashed #a80510;
+        // border: 1px dashed #a80510;
     }
     
     .card-like{

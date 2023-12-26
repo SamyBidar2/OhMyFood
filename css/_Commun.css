@@ -1,10 +1,19 @@
 * {
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
   --main-bg-color: #F6F6F6;
   --sec-bg-color: white;
+}
+
+header {
+  background-color: var(--sec-bg-color);
+}
+
+header img {
+  height: 44px;
 }
 
 body {
@@ -80,6 +89,14 @@ footer {
   padding: 22px 25px;
 }
 
+@media (min-width: 1044px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: right;
+    padding: 25px 30px;
+  }
+}
+
 footer h3 {
   font-family: 'Shrikhand' , serif;
   margin: 0px;
@@ -100,10 +117,29 @@ footer .liensFooter {
   gap: 7px;
 }
 
+@media (min-width: 1044px) {
+  footer .liensFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+  }
+}
+
 footer .liensFooter i {
   width: 13px;
   height: 13px;
   font-size: 13px;
+}
+
+@media (min-width: 1044px) {
+  footer .liensFooter i {
+    width: 15px;
+    height: 16px;
+    font-size: 13px;
+  }
 }
 
 footer .liensFooter a {
@@ -123,24 +159,6 @@ footer .liensFooter .Footer-texte-icone {
 }
 
 @media (min-width: 1044px) {
-  footer {
-    flex-direction: row-reverse;
-    justify-content: right;
-    padding: 25px 30px;
-  }
-  footer .liensFooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    gap: 7px;
-  }
-  footer .liensFooter i {
-    width: 15px;
-    height: 16px;
-    font-size: 13px;
-  }
   footer .liensFooter .Footer-texte-icone {
     display: flex;
     flex-direction: row;

@@ -24,12 +24,21 @@ header{
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: var(--sec-bg-color);
     gap: 42px;
     
+    @media (min-width: 1044px) {
+        gap: 572px;
+    }
+    
     & img{
-        height: 44px;
         padding: 14px 0px;
+        margin-right: 89px;
+
+        @media (min-width: 1044px) {
+            margin-right: 621px;
+            padding: 31px 0px;
+        }
+       
     }
 
     & a{
@@ -63,7 +72,7 @@ main{
     background-color: #F6F6F6;
     height: 100%;
     @media (min-width: 1044px) {
-            display: flex;
+            // display: flex;
             justify-content: center;
             background-color: white;
     }
@@ -83,7 +92,9 @@ main{
     border-radius: 40px 40px 0px 0px;
     background-color: var(--main-bg-color);
     position:relative;
-    top:-40px;
+    // top:-40px;
+    margin: -40px auto 0;
+    padding-bottom: 40px;
 
     @media (min-width: 1044px) {
             justify-content: center;
@@ -91,7 +102,8 @@ main{
             align-content: center;
             width: 100%;
             max-width: 1055px;
-            top: 220px;
+            // margin: -40px auto 0;
+            top: 0;
     }
 }
    

@@ -7,13 +7,8 @@
 h1{
     font-size: 24px;
     font-weight: 700;
-    // font-style: normal;
-    // line-height: normal;
 }
 
-// h3{
-//     font-size: 18px;
-// }
 
 a{
     width: 100%;
@@ -24,17 +19,14 @@ a{
 main{
     display: flex;
     flex-direction: column;
-    // gap: 30px;
 }
 
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--sec-bg-color);
 
     & img{
-        height: 44px;
         padding: 14px 89px;
     }
 }
@@ -58,6 +50,8 @@ header{
          color: var(--Grey, #353535);
          font-size: 16px;
          font-weight: 500;
+         text-align: center;
+         width: 120px;
     }
 }
 

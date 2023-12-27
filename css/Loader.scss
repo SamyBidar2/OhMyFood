@@ -1,97 +1,96 @@
-.loader {
-  //   display: block;
-  //   --height-of-loader: 4px;
-  //   --loader-color: blueviolet;
-  //   width: 130px;
-  //   height: var(--height-of-loader);
-  //   border-radius: 30px;
-  //   background-color: rgba(0,0,0,0.2);
-  //   position: relative;
-  // }
-  
-  // .loader::before {
-  //   content: "";
-  //   position: absolute;
-  //   background: var(--loader-color);
-  //   top: 0;
-  //   left: 0;
-  //   width: 0%;
-  //   height: 100%;
-  //   border-radius: 30px;
-  //   animation: moving 1s ease-in-out infinite;
-  // }
-  
-  // @keyframes moving {
-  //   50% {
-  //     width: 100%;
-  //   }
-  
-  //   100% {
-  //     width: 0;
-  //     right: 0;
-  //     left: unset;
-  //   }
+// .loader {
 
-border: 3px solid;
-box-sizing: border-box;
-padding: 15px;
-font-size: 40px;
-height: 600px;
-width: 300px;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-//animation: flou 1s ease-in-out infinite alternate;
-// animation: smokeOut 1s ease-in-out infinite alternate;
-
-}
-
-@keyframes flou{
-  from{
-    opacity:1;
-    scale:1;
-    
-  }
-  to{
-    opacity: 0.1;
-    scale: 1.1;
-    filter: blur(3px);
-  }
-}
+// }
 
 #container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  border: 1px solid green;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  // border: 1px solid green;
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  animation: Invisible 0.5s forwards 3s;
+
+  @keyframes Invisible{
+    to{ 
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 }
 
-#ring {
-  width: 190px;
-  height: 190px;
+
+#ring1 {
+  width: 250px;
+  height: 250px;
   border: 1px solid transparent;
   border-radius: 50%;
-  border-bottom: 8px solid rgb(252, 183, 55);
+  border-bottom: 8px solid rgb(253, 134, 220);
   position: absolute;
 
-  animation: Galaxy 1s linear infinite;
+  animation: Galaxy 1.3s ease-in-out infinite;
+}
+
+#ring2 {
+  width: 240px;
+  height: 240px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  border-bottom: 8px solid rgb(147, 86, 220);
+  position: absolute;
+
+  animation: Galaxy2 1.5s ease-in-out infinite;
 }
 
 @keyframes Galaxy{
   from {
     transform: rotateX(45deg) rotateY(180deg) rotateZ(110deg);
-    border-bottom: 8px solid rgb(252, 183, 55);
+    border-bottom: 8px solid rgb(255, 121, 218);
   }
 
   to {
     transform: rotateX(45deg) rotateY(180deg) rotateZ(470deg);
-    border-bottom: 8px solid rgb(252, 111, 55);
+    border-bottom: 8px solid rgb(255, 121, 220);
   }
 
 }
+
+@keyframes Galaxy2{
+  from {
+    transform: rotateX(45deg) rotateY(180deg) rotateZ(110deg);
+    border-bottom: 8px solid rgb(147, 86, 220);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateY(180deg) rotateZ(560deg);
+    border-bottom: 8px solid rgb(147, 86, 222);
+
+  }
+}
+
+.TextLoad{
+  font-family: Shrikhand;
+  font-size: 20px;
+  animation: appear 3s ease-in infinite;
+}
+
+@keyframes appear {
+    from {
+      opacity: 0.05;
+      scale: 1;
+    }
+
+    to{
+        opacity: 0.5;
+        scale: 1.5;
+        // letter-spacing: 1px;
+      }
+} 
+
 
 
 // @keyframes smokeOut {

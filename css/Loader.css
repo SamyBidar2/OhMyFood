@@ -1,54 +1,78 @@
-.loader {
-  border: 3px solid;
-  box-sizing: border-box;
-  padding: 15px;
-  font-size: 40px;
-  height: 600px;
-  width: 300px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes flou {
-  from {
-    opacity: 1;
-    scale: 1;
-  }
-  to {
-    opacity: 0.1;
-    scale: 1.1;
-    filter: blur(3px);
-  }
-}
-
 #container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  border: 1px solid green;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  animation: Invisible 0.5s forwards 3s;
 }
 
-#ring {
-  width: 190px;
-  height: 190px;
+@keyframes Invisible {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#ring1 {
+  width: 250px;
+  height: 250px;
   border: 1px solid transparent;
   border-radius: 50%;
-  border-bottom: 8px solid #fcb737;
+  border-bottom: 8px solid #fd86dc;
   position: absolute;
-  animation: Galaxy 1s linear infinite;
+  animation: Galaxy 1.3s ease-in-out infinite;
+}
+
+#ring2 {
+  width: 240px;
+  height: 240px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  border-bottom: 8px solid #9356dc;
+  position: absolute;
+  animation: Galaxy2 1.5s ease-in-out infinite;
 }
 
 @keyframes Galaxy {
   from {
     transform: rotateX(45deg) rotateY(180deg) rotateZ(110deg);
-    border-bottom: 8px solid #fcb737;
+    border-bottom: 8px solid #ff79da;
   }
   to {
     transform: rotateX(45deg) rotateY(180deg) rotateZ(470deg);
-    border-bottom: 8px solid #fc6f37;
+    border-bottom: 8px solid #ff79dc;
+  }
+}
+
+@keyframes Galaxy2 {
+  from {
+    transform: rotateX(45deg) rotateY(180deg) rotateZ(110deg);
+    border-bottom: 8px solid #9356dc;
+  }
+  to {
+    transform: rotateX(50deg) rotateY(180deg) rotateZ(560deg);
+    border-bottom: 8px solid #9356de;
+  }
+}
+
+.TextLoad {
+  font-family: Shrikhand;
+  font-size: 20px;
+  animation: appear 3s ease-in infinite;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.05;
+    scale: 1;
+  }
+  to {
+    opacity: 0.5;
+    scale: 1.5;
   }
 }

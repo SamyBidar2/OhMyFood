@@ -1,4 +1,4 @@
-// @import '_Loader';
+@import 'Loader.scss';
 @import '_Commun.scss';
 
 
@@ -298,6 +298,30 @@ header{
         grid-template-columns: 1fr 1fr;
         column-gap: 100px;
         row-gap: 50px;
+        }
+    }
+}
+
+.loaded{
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-container{
+    opacity: 0;
+    visibility: hidden;
+    animation: Visible 0.5s forwards 3s;
+    // animation-delay: 3s;
+    
+
+    @keyframes Visible {
+        from{
+            opacity: 0;
+            visibility: hidden;
+        }
+        to {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

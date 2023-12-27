@@ -1,0 +1,96 @@
+// body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+//   margin: 0;
+// }
+
+// .cercle {
+//   width: 100px;
+//   height: 100px;
+//   background-color: blue; /* Couleur de fond du cercle */
+//   border-radius: 50%; 
+//   animation: Pivot 5s linear infinite;
+// }
+
+// .cercle::before {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background-color: blue;
+//   transform-origin: bottom;
+//   transform: scaleY(0);
+//   animation: fillAnimation 2s linear infinite;
+// }
+
+// @keyframes Pivot {
+//     from {
+//         transform: rotateY(0deg);
+//         // border-bottom: 8px solid rgb(252, 183, 55);
+//     }
+//     to {
+//         transform: rotateY(360deg);
+//         // border-bottom: 8px solid rgb(252, 183, 55);
+//     }
+// }
+
+// @keyframes fillAnimation {
+//   from {
+//       transform: scaleY(0);
+//   }
+//   to {
+//       transform: scaleY(1);
+//   }
+// }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Choisissez la couleur de fond du loader */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db; /* Choisissez la couleur du loader */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+.main-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+body.loaded .loader-overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.loaded .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

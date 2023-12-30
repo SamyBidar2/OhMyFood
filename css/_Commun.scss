@@ -88,19 +88,24 @@ img{
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     transition-property: opacity, box-shadow;
     transition-duration: 1s;
+        color: var(--White, #FFF);
+        font-size: 16px;
+        text-align: center;
+        min-width: 315px;
+        padding:13px 18.75px;
     
     &:hover {
         opacity: 80%;
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
     }
     
-    & span{
-        color: var(--White, #FFF);
-        font-size: 16px;
-        text-align: center;
-        min-width: 315px;
-        padding:13px 18.75px;
-    }
+    // & span{
+    //     color: var(--White, #FFF);
+    //     font-size: 16px;
+    //     text-align: center;
+    //     min-width: 315px;
+    //     padding:13px 18.75px;
+    // }
 }
 
 //Animation coeur Gradient

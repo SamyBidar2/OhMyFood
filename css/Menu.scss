@@ -1,7 +1,5 @@
 
 @import '_Commun.scss';
-// @import '_BoutonViolet.scss';
-// @import '_Footer.scss';
 
 h1{
     font-family: Shrikhand;
@@ -22,12 +20,15 @@ header{
     padding: 14px 89px 13px 17px;
     // gap: 42px;
 
-    @media (min-width: 1044px) {
+    @media (min-width: 1024px) {
         padding: 30px 621px 32.137px 17px;
         justify-content: space-between;
         align-items: flex-end;
         flex-shrink: 0;
-        // gap: 572px;
+    }
+
+    @media (min-width: 768px){
+        
     }
 
     & a{
@@ -57,7 +58,7 @@ main{
     position: relative;
     background-color: #F6F6F6;
     height: 100%;
-    @media (min-width: 1044px) {
+    @media (min-width: 1024px) {
             // display: flex;
             justify-content: center;
             background-color: white;
@@ -82,7 +83,7 @@ main{
     margin: -40px auto 0;
     padding-bottom: 40px;
 
-    @media (min-width: 1044px) {
+    @media (min-width: 1024px) {
             justify-content: center;
             align-items: center;
             align-content: center;
@@ -105,7 +106,7 @@ main{
     padding: 0px 10px;
     margin-top: 32px;
 
-    @media (min-width: 1044px) {
+    @media (min-width: 1024px) {
         margin-top: 32px;
         // border: 1px dashed #a80510;
     }
@@ -118,7 +119,7 @@ main{
         // bottom:25px;
         right: 24px;
 
-        @media (min-width: 1044px) {
+        @media (min-width: 1024px) {
             display: flex;
             position: absolute;
             box-sizing: border-box;
@@ -161,7 +162,7 @@ hr{
     opacity: 0;
     animation: fadeIn 1s forwards;
 
-    @media (min-width: 1044px){
+    @media (min-width: 1024px){
             width: 100%;
             max-width: 634px;
     }
@@ -192,15 +193,11 @@ hr{
         }
     }
  
- 
-.ligneMenu{
-    display: flex;
-    width: 100%;
-    // border: 1px dashed #a80582;
 
-    & article{
+
+    article{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-self: stretch;
         background-color: white;
         border-radius: 15px;
@@ -209,9 +206,6 @@ hr{
     
         & i{
             font-size: 22px;
-            position: absolute;
-            right: 25px;
-            bottom: 33px;
         }
     
         & .card-content {
@@ -221,11 +215,11 @@ hr{
             align-items: start;
             align-content: center;
             box-sizing: border-box;
-            padding: 15px;
+            padding: 13px;
             gap: 5px;
-            height: 69px;
+            height:69px;
             width: 100%;
-            z-index:0;
+            z-index:1;
         }
     
         & h3{
@@ -259,61 +253,53 @@ hr{
             margin-bottom: 0px;
             color: #353535;
             text-align: center;
-            // font-family: Roboto;
             font-size: 15.043px;
-            // font-style: normal;
             font-weight: 700;
-            // line-height: normal;
-            // z-index: 2;
-            // border: 1px dashed #a805a0;
+        }
+    
+
+
+        .MenuCheck{
+            background-color: #99E2D0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 69px;
+            width: 0px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            margin-right: -60px;  
+            transition: width 300ms, margin-right 300ms;
+            opacity: 0;
+        
+
+            & i{
+                font-size: 14px;
+                color: #99E2D0;
+            }
+
+            & .rond{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: white;
+            }
         }
     }
-}
-
-.MenuCheck{
-    background-color: #99E2D0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 69px;
-    width: 0px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    margin-right: -60px;  
-    transition: width 1ms, margin-right 10ms;
-    opacity: 0;
-   
-
-    & i{
-        font-size: 14px;
-        color: #99E2D0;
-        // opacity:0;
-        // transition: opacity 1ms;
-    }
-
-    & .rond{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background-color: white;
-    }
-}
 
 //animation menu
-article:active + .MenuCheck{
+article:active .MenuCheck{
     margin-right: 0px;
     width: 59px;
     opacity: 1;
 }
 
 article:active{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

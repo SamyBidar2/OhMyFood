@@ -57,7 +57,7 @@ h1 {
 
 @media (min-width: 1044px) {
   h1 {
-    font-size: 40 px;
+    font-size: 40px;
   }
 }
 
@@ -89,19 +89,16 @@ img {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition-property: opacity, box-shadow;
   transition-duration: 1s;
-}
-
-.bouton:hover {
-  opacity: 80%;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-}
-
-.bouton span {
   color: var(--White, #FFF);
   font-size: 16px;
   text-align: center;
   min-width: 315px;
   padding: 13px 18.75px;
+}
+
+.bouton:hover {
+  opacity: 80%;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
 .coeurgradient {
@@ -224,7 +221,7 @@ header {
   padding: 14px 89px 13px 17px;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1024px) {
   header {
     padding: 30px 621px 32.137px 17px;
     justify-content: space-between;
@@ -256,7 +253,7 @@ main {
   height: 100%;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1024px) {
   main {
     justify-content: center;
     background-color: white;
@@ -281,7 +278,7 @@ main {
   padding-bottom: 40px;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1024px) {
   .Containerprincipal {
     justify-content: center;
     align-items: center;
@@ -302,7 +299,7 @@ main {
   margin-top: 32px;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1024px) {
   .MenuTitreContainer {
     margin-top: 32px;
   }
@@ -316,7 +313,7 @@ main {
   right: 24px;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1024px) {
   .MenuTitreContainer .card-like {
     display: flex;
     position: absolute;
@@ -355,7 +352,7 @@ section {
   animation: fadeIn 1s forwards;
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1024px) {
   section {
     width: 100%;
     max-width: 634px;
@@ -387,14 +384,9 @@ section {
   }
 }
 
-.ligneMenu {
+article {
   display: flex;
-  width: 100%;
-}
-
-.ligneMenu article {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-self: stretch;
   background-color: white;
   border-radius: 15px;
@@ -402,34 +394,31 @@ section {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
-.ligneMenu article i {
+article i {
   font-size: 22px;
-  position: absolute;
-  right: 25px;
-  bottom: 33px;
 }
 
-.ligneMenu article .card-content {
+article .card-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   align-content: center;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 13px;
   gap: 5px;
   height: 69px;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
 }
 
-.ligneMenu article h3 {
+article h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.ligneMenu article p {
+article p {
   font-size: 15px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -440,7 +429,7 @@ section {
   transition: 2s;
 }
 
-.ligneMenu article .Price {
+article .Price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -448,7 +437,7 @@ section {
   width: 100%;
 }
 
-.ligneMenu article span {
+article span {
   width: 50px;
   margin-bottom: 0px;
   color: #353535;
@@ -457,7 +446,7 @@ section {
   font-weight: 700;
 }
 
-.MenuCheck {
+article .MenuCheck {
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
@@ -468,16 +457,16 @@ section {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-right: -60px;
-  transition: width 1ms, margin-right 10ms;
+  transition: width 300ms, margin-right 300ms;
   opacity: 0;
 }
 
-.MenuCheck i {
+article .MenuCheck i {
   font-size: 14px;
   color: #99E2D0;
 }
 
-.MenuCheck .rond {
+article .MenuCheck .rond {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,15 +477,13 @@ section {
   background-color: white;
 }
 
-article:active + .MenuCheck {
+article:active .MenuCheck {
   margin-right: 0px;
   width: 59px;
   opacity: 1;
 }
 
 article:active {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

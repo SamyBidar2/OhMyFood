@@ -299,7 +299,8 @@ article:active .MenuCheck{
     opacity: 1;
 }
 
-article:active{
+//permet de faire passer la case à cocher par dessus le texte et de le mettre en pointillets
+article:active .card-content{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

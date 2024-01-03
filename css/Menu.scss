@@ -269,8 +269,8 @@ hr{
             width: 0px;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
-            margin-right: -60px;  
-            transition: width 300ms, margin-right 300ms;
+            margin-right: 0px;  
+            transition: width 1s;
             opacity: 0;
         
 
@@ -294,7 +294,7 @@ hr{
 
 //animation menu
 article:active .MenuCheck{
-    margin-right: 0px;
+    // margin-right: 0px;
     width: 59px;
     opacity: 1;
 }

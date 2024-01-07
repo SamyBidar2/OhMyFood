@@ -77,8 +77,6 @@ header{
 
     & h1{
         margin-bottom: 12px;
-        // margin-top: 0px;
-        // width: 275px;
     }
 
     & p{
@@ -144,10 +142,6 @@ header{
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         position: relative; // pour pouvoir fixer le chiffre centré sur le bord du bouton et aligné avec la lettre F de Fonctionnement
     
-        // & i{
-        //     font-size:15px ;
-        // }
-
         &:hover  i{
             color:#9356DC;
         }
@@ -306,9 +300,7 @@ header{
 .main-container{
     opacity: 0;
     visibility: hidden;
-    animation: Visible 0.5s forwards 3s;
-    // animation-delay: 3s;
-    
+    animation: Visible 0.5s forwards 3s;    
 
     @keyframes Visible {
         from{

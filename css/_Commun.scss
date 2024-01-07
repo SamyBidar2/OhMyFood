@@ -25,6 +25,7 @@ header{
         align-self: stretch;
     }
     
+    
     & img{
         height: 30px;
         padding: 0px 19px 0px 16px;
@@ -150,6 +151,10 @@ footer{
         font-size: 15px;
         margin: 0px;
         width: 130px;
+
+        @media (min-width: 768px) {
+            width: 130px;
+        }
     }
    
 
@@ -157,6 +162,14 @@ footer{
         display: flex;
         flex-direction: column;
         gap:7px;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            gap:7px;
+        }
 
         @media (min-width: 1024px) {
             display: flex;
@@ -193,6 +206,15 @@ footer{
             gap:11px;
             text-align: center;
             width: 100%;
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 200px;
+                gap:11px;
+            }
 
             @media (min-width: 1024px) {
                 display: flex;

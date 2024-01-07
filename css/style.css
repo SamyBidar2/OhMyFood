@@ -226,10 +226,26 @@ footer p {
   width: 130px;
 }
 
+@media (min-width: 768px) {
+  footer p {
+    width: 130px;
+  }
+}
+
 footer .liensFooter {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+
+@media (min-width: 768px) {
+  footer .liensFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -271,6 +287,17 @@ footer .liensFooter .Footer-texte-icone {
   gap: 11px;
   text-align: center;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  footer .liensFooter .Footer-texte-icone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    gap: 11px;
+  }
 }
 
 @media (min-width: 1024px) {

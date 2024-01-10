@@ -59,20 +59,3 @@
     border-bottom: 8px solid #9356de;
   }
 }
-
-.TextLoad {
-  font-family: Shrikhand;
-  font-size: 20px;
-  animation: appear 3s ease-in infinite;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0.05;
-    scale: 1;
-  }
-  to {
-    opacity: 0.5;
-    scale: 1.5;
-  }
-}

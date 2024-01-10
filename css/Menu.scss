@@ -15,20 +15,6 @@ h2{
 
 // *************************  Header ************************************
 header{
-    flex-direction: row;
-    justify-content: center;
-    padding: 14px 89px 13px 17px;
-
-    @media (min-width: 768px){
-        justify-content: center;
-        align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-        justify-content: center;
-        align-items: center;
-    }
-
     
     & a{
         display: flex;
@@ -59,7 +45,6 @@ main{
     background-color: #F6F6F6;
     height: 100%;
     @media (min-width: 1024px) {
-            // display: flex;
             justify-content: center;
             background-color: white;
     }
@@ -79,7 +64,6 @@ main{
     border-radius: 40px 40px 0px 0px;
     background-color: var(--main-bg-color);
     position:relative;
-    // top:-40px;
     margin: -40px auto 0;
     padding-bottom: 40px;
 
@@ -89,7 +73,6 @@ main{
             align-content: center;
             width: 100%;
             max-width: 1055px;
-            // margin: -40px auto 0;
             top: 0;
     }
 
@@ -165,8 +148,8 @@ hr{
     animation: fadeIn 1s forwards;
 
     @media (min-width: 1024px){
-            width: 100%;
-            max-width: 634px;
+        width: 100%;
+        max-width: 634px;
     }
 }  
     //animation apparition des sections entrées, plats, desserts.
@@ -182,7 +165,8 @@ hr{
         animation-delay: 800ms;
     }
 
-    .ValiderCommande{
+    #ValiderCommande{
+        width: fit-content;
         animation-delay: 1s;
     }
 

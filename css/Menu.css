@@ -141,7 +141,7 @@ footer {
 }
 
 footer h3 {
-  font-family: 'Shrikhand' , serif;
+  font-family: 'Shrikhand', serif;
   margin: 0px;
   width: 137.582px;
   height: 27px;
@@ -168,22 +168,18 @@ footer .liensFooter {
 
 @media (min-width: 768px) {
   footer .liensFooter {
-    display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
-    gap: 7px;
   }
 }
 
 @media (min-width: 1024px) {
   footer .liensFooter {
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    gap: 7px;
   }
 }
 
@@ -219,22 +215,15 @@ footer .liensFooter .Footer-texte-icone {
 
 @media (min-width: 768px) {
   footer .liensFooter .Footer-texte-icone {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
     width: 200px;
-    gap: 11px;
   }
 }
 
 @media (min-width: 1024px) {
   footer .liensFooter .Footer-texte-icone {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     width: 200px;
-    gap: 11px;
   }
 }
 

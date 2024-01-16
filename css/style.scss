@@ -194,7 +194,6 @@ header{
     margin-top: 54px;
     margin-bottom: 54px;
     padding: 0px 18px;
-    position: relative;
 
     @media (min-width: 1024px) {
         padding: 0px 180px;
@@ -262,7 +261,7 @@ header{
         & .card-like{
             text-align: center;
             z-index:1;
-            position: relative;
+            // position: relative;
         }
     
         & h3{
@@ -290,11 +289,7 @@ header{
     }
 }
 
-.loaded{
-    opacity: 1;
-    visibility: visible;
-}
-
+//annimation pour faire apparaitre la page apres le loader
 .main-container{
     opacity: 0;
     visibility: hidden;

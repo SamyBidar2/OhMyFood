@@ -9,6 +9,7 @@
   visibility: visible;
   opacity: 1;
   animation: Invisible 0.5s forwards 3s;
+  position:fixed;
 
   @keyframes Invisible{
     to{ 

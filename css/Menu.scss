@@ -255,7 +255,7 @@ hr{
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             margin-right: 0px;  
-            transition: width 1s;
+            transition: width 1s, opacity 1s;
             opacity: 0;
         
 
@@ -282,6 +282,7 @@ article:active .MenuCheck{
     width: 59px;
     opacity: 1;
 }
+
 
 //permet de faire passer la case à cocher par dessus le texte et de le mettre en pointillets
 article:active .card-content{

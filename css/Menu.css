@@ -149,7 +149,7 @@ footer h3 {
 }
 
 footer p {
-  font-size: 15px;
+  font-size: 16px;
   margin: 0px;
   width: 130px;
 }
@@ -198,7 +198,7 @@ footer .liensFooter i {
 }
 
 footer .liensFooter a {
-  font-size: 15px;
+  font-size: 16px;
   margin: 0px;
   color: white;
   text-decoration: none;
@@ -477,7 +477,7 @@ article .MenuCheck {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-right: 0px;
-  transition: width 1s;
+  transition: width 1s, opacity 1s;
   opacity: 0;
 }
 
